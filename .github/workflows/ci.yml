@@ -1,0 +1,20 @@
+name: End-to-end tests
+
+on:
+  push:
+    branches:
+      - capstone1
+  pull_request:
+    branches:
+      - capstone1
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: myshop
+        uses: actions/checkout@v4
+      - name: Cypress run on Chrome
+        uses: cypress-io/github-action@v6
+        with:
+          browser: chrome
