@@ -5,6 +5,7 @@ module.exports = defineConfig({
     reporter:'cypress-mochawesome-reporter',
     setupNodeEvents(on, config) {
       // implement node event listeners here
+      require('cypress-image-diff-js/plugin')(on,config);
       require('cypress-mochawesome-reporter/plugin')(on);
     },
     baseUrl:"https://myshop.org.in/",

@@ -24,6 +24,16 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+const compareSnapshotCommand = require('cypress-image-diff-js/command');
+compareSnapshotCommand();
+
+
+
+
+
+
+
+
 Cypress.Commands.add('Search',()=>{
     cy.visit('https://myshop.org.in/index.php?route=product/category&path=237_255')
 })
